@@ -1,7 +1,11 @@
 {
   "pt": {
-    "titulo": "Meus vídeos",
-    "tituloFavoritos": "Meus favoritos",
-    "textoBotaoFavorito": "Adicionar Favorito"
+    "boasVindas": "Bem vindo!",
+    
+    "projetos": "Nossos projetos",
+    "sobre": "Sobre-nós",
+    "contato": "Contate-nos",
+    "idioma": "Idioma",
+    "tema": "Tema"
   }
 }
