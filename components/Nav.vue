@@ -10,8 +10,8 @@
     </template>
 
     <template v-else>
-      <NuxtLink to="/" class="-ml-12 mt-2">
-        <NuxtImg :src="logo" width="150" />
+      <NuxtLink to="/" class="-ml-12 mt-2" aria-label="Navigate to top">
+        <NuxtImg :src="logo" width="150" height="85" alt="logo Meet us" />
       </NuxtLink>
 
       <div class="hidden md:flex items-center min-w-0 gap-8">
