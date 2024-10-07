@@ -4,9 +4,9 @@
     :class="{ 'shadow-md': !loading }">
 
     <template v-if="loading">
-      <USkeleton class="h-8 w-24 md:h-12 md:w-36" />
-      <USkeleton class="h-8 w-48 md:h-12 md:w-96" />
-      <USkeleton class="hidden md:flex h-12 w-72" />
+      <USkeleton class="h-8 w-24 md:h-8 md:w-36" />
+      <USkeleton class="h-8 w-48 md:h-8 md:w-96" />
+      <USkeleton class="hidden md:flex h-8 w-52" />
     </template>
 
     <template v-else>
@@ -15,32 +15,19 @@
       </NuxtLink>
 
       <div class="hidden md:flex items-center min-w-0 gap-8">
-        <ULink to="#about-us"
-          active-class="text-sm md:text-base py-1 px-2 font-semibold text-dark hover:bg-gray-200 hover:rounded-md dark:hover:bg-gray-900 dark:hover:text-gray-200">
-          {{ $t("sobre") }}
-        </ULink>
-
-        <ULink to="#projects"
-          active-class="text-sm md:text-base py-1 px-2 font-semibold text-dark hover:bg-gray-200 hover:rounded-md dark:hover:bg-gray-900 dark:hover:text-gray-200">
-          {{ $t("projetos") }}
-        </ULink>
-
-        <ULink to="#contact-us"
-          active-class="text-sm md:text-base py-1 px-2 font-semibold text-dark hover:bg-gray-200 hover:rounded-md dark:hover:bg-gray-900 dark:hover:text-gray-200">
-          {{ $t("contato") }}
-        </ULink>
+        <UHorizontalNavigation :links="items" :ui="ui" />
       </div>
 
       <div class="flex gap-2 md:gap-4">
         <UPopover mode="hover">
-          <UButton icon="i-lucide:languages" size="md" color="white" variant="soft" :label="$t('idioma')" :trailing="false" />
+          <UButton icon="i-lucide:languages" size="sm" color="white" variant="soft" :label="$t('idioma')" :trailing="false" />
           <template #panel>
             <SelectLanguage />
           </template>
         </UPopover>
 
         <UPopover mode="hover">
-          <UButton icon="i-lucide:palette" size="md" color="white" variant="soft" :label="$t('tema')" :trailing="false" />
+          <UButton icon="i-lucide:palette" size="sm" color="white" variant="soft" :label="$t('tema')" :trailing="false" />
           <template #panel>
             <SelectTheme />
           </template>
@@ -58,7 +45,6 @@
 <script setup lang="ts">
 const { t } = useI18n();
 const colorMode = useColorMode();
-const loading = ref<boolean>(true);
 
 const logo = computed(() => {
   return (colorMode.value === 'light' || colorMode.value === 'sepia') ? '/logo_light_meet-us.png' : '/logo_dark_meet-us.png';
@@ -66,11 +52,21 @@ const logo = computed(() => {
 
 const items = [
   [
+    {label: t("inicio"), to: '#start' }, 
     {label: t("sobre"), to: '#about-us' }, 
     {label: t("projetos"), to: '#projects'}, 
+    {label: t("feedbacks"), to: '#feedbacks'},
+    {label: t("habilidades"), to: '#skills'}, 
     {label: t("contato"), to: '#contact-us'},
   ]
 ]
+
+const ui = {
+  before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-100 dark:hover:before:bg-gray-900/50',
+  active: 'text-gray-900 dark:text-white after:bg-transparent dark:after:bg-transparent after:rounded-full',
+}
+
+const loading = ref<boolean>(true);
 
 onMounted(() => {
   setTimeout(() => {

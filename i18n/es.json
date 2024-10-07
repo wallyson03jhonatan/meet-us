@@ -2,9 +2,13 @@
   "es": {
     "boasVindas": "¡Bienvenido!",
     
-    "projetos": "Nuestros proyectos",
-    "sobre": "Acerca de nosotros",
+    "inicio": "Início",
+    "sobre": "Sobre nosotros",
+    "projetos": "Proyectos",
+    "feedbacks": "Feedbacks",
+    "habilidades": "Habilidades",
     "contato": "Contáctanos",
+
     "idioma": "Idioma",
     "tema": "Tema",
 
