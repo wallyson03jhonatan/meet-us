@@ -50,16 +50,18 @@ const logo = computed(() => {
   return (colorMode.value === 'light' || colorMode.value === 'sepia') ? '/logo_light_meet-us.png' : '/logo_dark_meet-us.png';
 })
 
-const items = [
-  [
-    {label: t("inicio"), to: '#start' }, 
-    {label: t("sobre"), to: '#about-us' }, 
-    {label: t("projetos"), to: '#projects'}, 
-    {label: t("feedbacks"), to: '#feedbacks'},
-    {label: t("habilidades"), to: '#skills'}, 
-    {label: t("contato"), to: '#contact-us'},
+const items = computed(() => { 
+  return [ 
+    [
+      {label: t("inicio"), to: '#start' }, 
+      {label: t("sobre"), to: '#about-us' }, 
+      {label: t("projetos"), to: '#projects'}, 
+      {label: t("feedbacks"), to: '#feedbacks'},
+      {label: t("habilidades"), to: '#skills'}, 
+      {label: t("contato"), to: '#contact-us'},
+    ]
   ]
-]
+})  
 
 const ui = {
   before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-100 dark:hover:before:bg-gray-900/50',
