@@ -21,6 +21,8 @@ function scrollToTop() {
     top: 0,
     behavior: 'smooth'
   })
+
+  navigateTo('/')
 }
 
 function updateButtonVisibility() {
