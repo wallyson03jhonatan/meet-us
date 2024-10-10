@@ -53,8 +53,8 @@ const logo = computed(() => {
 const items = computed(() => { 
   return [ 
     [
-      {label: t("inicio"), to: '#start' }, 
-      {label: t("sobre"), to: '#about-us' }, 
+      {label: t("inicio"), to: '#start'}, 
+      {label: t("sobre"), to: '#about-us'}, 
       {label: t("projetos"), to: '#projects'}, 
       {label: t("feedbacks"), to: '#feedbacks'},
       {label: t("habilidades"), to: '#skills'}, 
