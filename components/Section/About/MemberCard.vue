@@ -46,7 +46,7 @@ defineProps<{
 
 const ui = {
   body: {
-    base: 'h-full flex flex-col items-center justify-center gap-8 shadow-md',
+    base: 'h-full min-h-[452px] flex flex-col items-center justify-center gap-8 shadow-md',
   },
 }
 

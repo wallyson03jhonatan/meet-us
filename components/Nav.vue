@@ -15,7 +15,7 @@
       </NuxtLink>
 
       <div class="hidden md:flex items-center min-w-0 gap-8">
-        <UHorizontalNavigation :links="items" :ui="ui" />
+        <UHorizontalNavigation :links="items" :ui="uiHorizontalNavigation" />
       </div>
 
       <div class="flex gap-2 md:gap-4">
@@ -33,7 +33,7 @@
           </template>
         </UPopover>
 
-        <UDropdown class="md:hidden" :items="items" :popper="{ placement: 'bottom-start' }">
+        <UDropdown class="md:hidden" :items="items" :popper="{ placement: 'bottom-start' }" :ui="uiDropdown">
           <UButton color="white" icon="i-lucide:menu"  />
         </UDropdown>
       </div>
@@ -63,9 +63,16 @@ const items = computed(() => {
   ]
 })  
 
-const ui = {
+const uiHorizontalNavigation = {
   before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-100 dark:hover:before:bg-gray-900/50',
   active: 'text-gray-900 dark:text-white after:bg-transparent dark:after:bg-transparent after:rounded-full',
+}
+
+const uiDropdown = {
+  item: {
+    base: 'group flex items-center gap-1.5 w-full my-1',
+  },
+
 }
 
 const loading = ref<boolean>(true);
