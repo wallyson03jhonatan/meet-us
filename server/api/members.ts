@@ -27,6 +27,7 @@ const translations: Record<SupportedLangs, { profession1: string, profession2: s
     },
 
 }
+
 export default defineEventHandler((event) => {
     const query = getQuery(event);
     const lang = (query.lang as SupportedLangs) || 'pt';

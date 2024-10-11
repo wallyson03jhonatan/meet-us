@@ -1,5 +1,5 @@
 <template>
-  <div ref="cardMemberRef" :class="{ 'flip-visible': isCardMemberVisible }" class="flip-card">
+  <div ref="cardMemberRef" :class="{ 'flip-card--visible': isCardMemberVisible }" class="flip-card">
     <UCard :ui="ui">
       <div class="flex flex-col items-center gap-4">
         <UAvatar size="3xl" :src="member.avatar" :alt="`${member.name} Avatar`" />
@@ -79,7 +79,7 @@ onMounted(() => {
   transition: transform 0.8s, opacity 0.6s;
 }
 
-.flip-visible {
+.flip-card--visible {
   opacity: 1;
   transform: rotateY(0);
 }

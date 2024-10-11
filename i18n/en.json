@@ -12,6 +12,12 @@
     "idioma": "Language",
     "tema": "Theme",
 
-    "voltarAoTopo": "back to top" 
+    "voltarAoTopo": "back to top", 
+
+    "sobreTitulo": "Meet our team",
+    "sobreDescricao": "Get to know the faces behind the scenes and learn about the values that drive us.",
+
+    "feedbackTitulo": "Real Stories from Satisfied Customers",
+    "feedbackDescricao": "See how our skills and hard work is making an impact."
   }
 }

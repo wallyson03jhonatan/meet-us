@@ -12,6 +12,13 @@
     "idioma": "Idioma",
     "tema": "Tema",
 
-    "voltarAoTopo": "voltar ao topo" 
+    "voltarAoTopo": "voltar ao topo",
+    
+    "sobreTitulo": "Conheça nosso time",
+    "sobreDescricao": "Conheça os rostos dos bastidores e aprenda sobre os valores que nos movem.",
+
+    "feedbackTitulo": "Histórias reais de clientes satisfeitos",
+    "feedbackDescricao": "Veja como nossas habilidades e trabalho duro está fazendo a diferença."
+
   }
 }
