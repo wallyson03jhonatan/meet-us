@@ -55,7 +55,6 @@ const fetchMembers = async () => {
   const { members } = await $fetch(`/api/members?lang=${locale.value}`);
 
   if (!members) {
-    loading.value = false;
     return;
   }
 

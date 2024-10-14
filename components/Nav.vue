@@ -11,7 +11,7 @@
 
     <template v-else>
       <NuxtLink to="/" class="-ml-12 mt-2" aria-label="Navigate to top">
-        <NuxtImg :src="logo" width="150" height="85" alt="logo Meet us" />
+        <NuxtImg :src="logo" width="150" height="85" quality="80" alt="logo Meet us" loading="lazy" />
       </NuxtLink>
 
       <div class="hidden md:flex items-center min-w-0 gap-8">
@@ -72,7 +72,6 @@ const uiDropdown = {
   item: {
     base: 'group flex items-center gap-1.5 w-full my-1',
   },
-
 }
 
 const loading = ref<boolean>(true);
@@ -80,7 +79,7 @@ const loading = ref<boolean>(true);
 onMounted(() => {
   setTimeout(() => {
     loading.value = false;
-  }, 1000);
+  }, 500);
 });
 </script>
 

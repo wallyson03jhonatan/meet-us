@@ -2,9 +2,9 @@
   <div>
     <SectionStart />
     <SectionAbout />
-    <SectionSkills />
     <SectionProjects />
     <SectionFeedbacks />
+    <SectionSkills />
     <SectionContact />
 
     <Footer />

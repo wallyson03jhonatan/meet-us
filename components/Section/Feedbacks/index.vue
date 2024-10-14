@@ -1,5 +1,5 @@
 <template>
-    <section id="feedbacks" class="scroll-mt-28 bg-gray-100 dark:bg-gray-900">
+    <section id="feedbacks" class="scroll-mt-28 py-16 bg-gray-100 dark:bg-gray-900">
         <UContainer>
 
             <div class="text-center">
@@ -7,7 +7,7 @@
                 <p class="mt-1 font-normal">{{ $t("feedbackDescricao") }}</p>
             </div>
 
-            <div class="py-16 grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="pt-16 grid grid-cols-1 md:grid-cols-2 gap-16">
 
                 <template v-if="loading">
                     <USkeleton class="min-h-[300px] min-w-full" :ui="uiSkeleton" />
@@ -15,8 +15,12 @@
                 </template>
 
                 <template v-else>
-                    <SectionFeedbacksCustomersCard ref="card1" />
-                    <SectionFeedbacksCustomersCard ref="card2" />
+                    <SectionFeedbacksCustomersCard 
+                        v-for="values, key in feedbacksValue" 
+                        :key="key" 
+                        :feedback-info="values" 
+                        :ref="values.id.toString()" 
+                    />
                 </template>
 
             </div>
@@ -26,16 +30,41 @@
 </template>
 
 <script setup lang="ts">
+interface Feedbacks {
+  id: number;
+  avatar: string;
+  name: string;
+  profession: string;
+  feedback: string;
+  rating: number;
+}
+
 const { locale } = useI18n();
 const loading = ref<boolean>(true);
+const feedbacksValue = ref<Feedbacks[]>([]);
 
 const uiSkeleton = {
     background: 'bg-gray-200 dark:bg-gray-800'
 }
 
+const fetchFeedbacks = async () => {
+  loading.value = true;
+  
+  const { feedbacks } = await $fetch(`/api/feedbacks?lang=${locale.value}`);
+
+  if (!feedbacks) {
+    return;
+  }
+
+  feedbacksValue.value = feedbacks;
+  loading.value = false;
+};
+
 onMounted(() => {
-  setTimeout(() => {
-    loading.value = false;
-  }, 1000);
+  fetchFeedbacks();
+});
+
+watch(locale, () => {
+  fetchFeedbacks();
 });
 </script>
