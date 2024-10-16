@@ -77,9 +77,7 @@ const uiDropdown = {
 const loading = ref<boolean>(true);
 
 onMounted(() => {
-  setTimeout(() => {
-    loading.value = false;
-  }, 500);
+  loading.value = false;
 });
 </script>
 

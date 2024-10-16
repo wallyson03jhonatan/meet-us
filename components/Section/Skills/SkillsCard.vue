@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { useIntersectionObserver } from '@vueuse/core'
+import { useVisibilityObserver } from '~/composables/useVisibilityObserver';
 
 defineProps<{
     info: {
@@ -19,37 +19,21 @@ defineProps<{
     } 
 }>()
 
-const cardSkillRef = ref<HTMLElement | null>(null)
-const isCardSkillVisible = ref<boolean>(false)
+const { isVisible: isCardSkillVisible, observeVisibility } = useVisibilityObserver();
+const cardSkillRef = ref<HTMLElement | null>(null);
 
-const isMobile = ref<boolean>(false)
-const thresholdValue = ref<number>(0)
-
-onMounted(() => {
-    isMobile.value = window.innerWidth < 768
-    thresholdValue.value = isMobile.value ? 0.75 : 0
-
-    useIntersectionObserver(
-        cardSkillRef,
-        ([{ isIntersecting }]) => {
-            isCardSkillVisible.value = isIntersecting;
-        },
-        {
-            threshold: thresholdValue.value,
-        }
-    );
-});
+observeVisibility(cardSkillRef);
 </script>
 
 <style scoped>
 .translateX-card {
     opacity: 0;
-    transform: translateX(100%);
-    transition: ease-in-out 0.8s, opacity 0.6s;
+    transform: translateY(100%);
+    transition: ease-out 0.8s, opacity 0.6s;
 }
 
 .translateX-card--visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 </style>

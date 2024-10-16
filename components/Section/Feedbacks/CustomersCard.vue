@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { useIntersectionObserver } from '@vueuse/core'
+import { useVisibilityObserver } from '~/composables/useVisibilityObserver';
 const { locale } = useI18n();
 
 defineProps<{
@@ -61,26 +61,10 @@ const ui = {
     },
 }
 
-const cardCustomerRef = ref<HTMLElement | null>(null)
-const isCardCustomerVisible = ref<boolean>(false)
+const { isVisible: isCardCustomerVisible, observeVisibility } = useVisibilityObserver();
+const cardCustomerRef = ref<HTMLElement | null>(null);
 
-const isMobile = ref<boolean>(false)
-const thresholdValue = ref<number>(0)
-
-onMounted(() => {
-    isMobile.value = window.innerWidth < 768
-    thresholdValue.value = isMobile.value ? 0.75 : 0
-
-    useIntersectionObserver(
-        cardCustomerRef,
-        ([{ isIntersecting }]) => {
-            isCardCustomerVisible.value = isIntersecting;
-        },
-        {
-            threshold: thresholdValue.value,
-        }
-    );
-});
+observeVisibility(cardCustomerRef);
 </script>
 
 <style scoped>

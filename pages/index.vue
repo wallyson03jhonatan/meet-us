@@ -1,11 +1,13 @@
 <template>
   <div>
-    <SectionStart />
-    <SectionAbout />
-    <SectionProjects />
-    <SectionFeedbacks />
-    <SectionSkills />
-    <SectionContact />
+    <main>
+      <SectionStart />
+      <SectionAbout />
+      <SectionProjects />
+      <SectionFeedbacks />
+      <SectionSkills />
+      <SectionContact />
+    </main>
 
     <Footer />
 
