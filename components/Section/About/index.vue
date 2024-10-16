@@ -1,5 +1,5 @@
 <template>
-  <UContainer as="section" id="about-us" class="scroll-mt-28">
+  <UContainer as="section" id="about-us" class="py-16 scroll-mt-28">
 
     <div class="text-center">
       <h2 class="font-semibold text-4xl">{{ $t("sobreTitulo") }}</h2>
