@@ -1,6 +1,6 @@
 <template>
   <nav 
-    class="flex items-center justify-between md:justify-around w-full px-8 sticky top-0 min-h-[85px] z-[1000] backdrop-blur-xl"
+    class="flex items-center justify-between md:justify-around w-full px-8 fixed top-0 min-h-[85px] z-[1000] backdrop-blur-xl"
     :class="{ 'shadow-md': !loading }">
 
     <template v-if="loading">
