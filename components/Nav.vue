@@ -1,7 +1,7 @@
 <template>
   <nav 
     class="flex items-center justify-between md:justify-around w-full px-8 fixed top-0 min-h-[85px] z-[1000] backdrop-blur-xl"
-    :class="{ 'shadow-md': !loading }">
+    :class="{ 'shadow-md': !loading && isScrollVisible }">
 
     <template v-if="loading">
       <USkeleton class="h-8 w-24 md:h-8 md:w-36" />
@@ -45,6 +45,8 @@
 <script setup lang="ts">
 const { t } = useI18n();
 const colorMode = useColorMode();
+const loading = ref<boolean>(true);
+const { isScrollVisible } = useScrollVisibility();
 
 const logo = computed(() => {
   return (colorMode.value === 'light' || colorMode.value === 'sepia') ? '/logo_light_meet-us.png' : '/logo_dark_meet-us.png';
@@ -73,8 +75,6 @@ const uiDropdown = {
     base: 'group flex items-center gap-1.5 w-full my-1',
   },
 }
-
-const loading = ref<boolean>(true);
 
 onMounted(() => {
   loading.value = false;
