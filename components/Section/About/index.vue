@@ -6,7 +6,7 @@
       <p class="mt-1 font-normal">{{ $t("sobreDescricao") }}</p>
     </div>
 
-    <div class="my-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+    <div class="my-16 grid grid-cols-1 lg:grid-cols-3 gap-16">
 
       <template v-if="loading">
         <USkeleton class="min-h-[300px] min-w-full" />
