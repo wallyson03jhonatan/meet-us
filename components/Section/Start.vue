@@ -5,14 +5,8 @@
 
                 <div class="flex flex-col gap-12">
                     <div class="flex flex-col gap-8">
-                        <h1 class="font-semibold text-4xl md:text-6xl">We collaborate to build digital experience</h1>
-                        
-                        <p class="font-normal">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Cum, earum laudantium explicabo sint placeat corrupti sapiente voluptatibus minus totam
-                            quaerat et veniam modi? Alias consequatur illum labore dolor molestiae ad.
-                        </p>
-
+                        <h1 class="font-semibold text-4xl md:text-6xl">{{ $t("inicioTitulo") }}</h1>
+                        <p class="font-normal">{{ $t("inicioDescricao") }}</p>
                         <UButton 
                             class="max-w-[200px] justify-center"
                             size="lg" 
@@ -21,7 +15,7 @@
                             to="#contact-us"
                             :ui="{ rounded: 'rounded-full' }" 
                         >
-                            Let's Talk
+                            {{ $t("inicioButton") }}
                         </UButton>
                     </div>
 
@@ -29,7 +23,7 @@
                         <div 
                             v-for="item, key in startMiniCardInfos" 
                             :key="key" 
-                            class="flex flex-col p-4 gap-8 bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg overflow-hidden"
+                            class="flex flex-col p-4 gap-4 bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg overflow-hidden"
                         >
                             <UIcon :name="item.icon" :size="24"/>
                             <p class="text-sm">{{ item.info }}</p>
@@ -45,12 +39,11 @@
                             height="600" 
                             quality="100" 
                             alt="image of person" 
-                            loading="lazy" 
-                            :preload="true"
-                            format="webp"
                             class="rounded-full"
-                        >
-                        </NuxtImg>
+                            loading="lazy" 
+                            format="webp"
+                            :preload="true"
+                        />
                     </div>
                 </div>
 
@@ -60,19 +53,14 @@
 </template>
 
 <script setup lang="ts">
-const startMiniCardInfos = [
-    {
-        info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est illo dolorum numquam accusamus consectetur, quaerat deleniti neque sapiente ad, abaliquam iure autem nam inventore? Sequi quod sit id facilis!', 
-        icon: 'i-catppuccin:bash'
-    },
-    {
-        info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est illo dolorum numquam accusamus consectetur, quaerat deleniti neque sapiente ad, abaliquam iure autem nam inventore? Sequi quod sit id facilis!', 
-        icon: 'i-catppuccin:release'
-    },
-    {
-        info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est illo dolorum numquam accusamus consectetur, quaerat deleniti neque sapiente ad, abaliquam iure autem nam inventore? Sequi quod sit id facilis!', 
-        icon: 'i-catppuccin:liquid'
-    },
-]
+const { t } = useI18n();
+
+const startMiniCardInfos = computed(() => {
+    return [
+        { info: t("inicioCardValor"), icon: 'i-catppuccin:bash' },
+        { info: t("inicioCardInovacao"), icon: 'i-catppuccin:release' },
+        { info: t("inicioCardResiliencia"), icon: 'i-catppuccin:liquid' },
+    ]
+})
 
 </script>
