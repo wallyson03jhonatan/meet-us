@@ -1,5 +1,5 @@
 <template>
-    <section id="feedbacks" class="scroll-mt-28 py-16 bg-gray-100 dark:bg-gray-900">
+    <section id="feedbacks" class="scroll-mt-24 py-16 bg-gray-100 dark:bg-gray-900">
         <UContainer>
 
             <div class="text-center">
