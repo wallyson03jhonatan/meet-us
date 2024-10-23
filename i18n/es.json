@@ -22,13 +22,17 @@
     "inicioCardResiliencia": "Creemos en la resiliencia y la accesibilidad. Superamos desafíos para garantizar que nuestras soluciones estén al alcance de todos, haciendo la experiencia digital inclusiva y sostenible.",
 
     "sobreTitulo": "Conoce nuestro equipo",
-    "sobreDescricao": "Conoce a las caras detrás de escena y aprende sobre los valores que nos impulsan.",
+    "sobreDescricao": "Conoce a las caras detrás de escena y aprende sobre los valores que nos impulsan",
 
-    "feedbackTitulo": "Historias reales de clientes satisfechos",
-    "feedbackDescricao": "Mira cómo nuestras habilidades y nuestro arduo trabajo están marcando la diferencia.",
-    "feedbackRating": "Satisfecho",
+    "projetosTitulo": "Proyectos Seleccionados",
+    "projetosDescricao": "Explore nuestro portafolio y vea los proyectos más recientes que hemos hecho realidad",
+    "projetosStackDescricao": "Principales tecnologías utilizadas en el proyecto:",
 
     "habilidadesTitulo": "Nuestras habilidades",
-    "habilidadesDescricao": "Vea cómo podemos contribuir a su negocio, independientemente de la herramienta utilizada."
+    "habilidadesDescricao": "Vea cómo podemos contribuir a su negocio, independientemente de la herramienta utilizada",
+
+    "feedbackTitulo": "Historias reales de clientes satisfechos",
+    "feedbackDescricao": "Mira cómo nuestras habilidades y nuestro arduo trabajo están marcando la diferencia",
+    "feedbackRating": "Satisfecho"
   }
 }

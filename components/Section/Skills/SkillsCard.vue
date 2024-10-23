@@ -1,8 +1,8 @@
 <template>
     <li  
         ref="cardSkillRef" 
-        class="translateX-card p-4 gap-2 flex flex-col justify-center items-center rounded-xl shadow-lg bg-gray-100 dark:bg-gray-900"
-        :class="{ 'translateX-card--visible': isCardSkillVisible }"
+        class="translateY-card p-4 gap-2 flex flex-col justify-center items-center rounded-xl shadow-lg bg-gray-100 dark:bg-gray-900"
+        :class="{ 'translateY-card--visible': isCardSkillVisible }"
     >
         <span class="font-semibold">{{ info.title }}</span>
         <UIcon :name="info.icon" size="24" />
@@ -26,13 +26,13 @@ observeVisibility(cardSkillRef);
 </script>
 
 <style scoped>
-.translateX-card {
+.translateY-card {
     opacity: 0;
     transform: translateY(100%);
     transition: ease-out 0.8s, opacity 0.6s;
 }
 
-.translateX-card--visible {
+.translateY-card--visible {
     opacity: 1;
     transform: translateY(0);
 }

@@ -40,7 +40,6 @@
                             quality="100" 
                             alt="image of person" 
                             class="rounded-full"
-                            loading="lazy" 
                             format="webp"
                             :preload="true"
                         />

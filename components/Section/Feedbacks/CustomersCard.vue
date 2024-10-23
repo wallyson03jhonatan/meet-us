@@ -41,7 +41,6 @@
 
 <script setup lang="ts">
 import { useVisibilityObserver } from '~/composables/useVisibilityObserver';
-const { locale } = useI18n();
 
 defineProps<{
     feedbackInfo: {

@@ -61,7 +61,7 @@ observeVisibility(cardMemberRef);
 .flip-card {
   opacity: 0;
   transform: rotateY(180deg);
-  transition: transform 0.8s, opacity 0.6s;
+  transition: transform 1.5s;
 }
 
 .flip-card--visible {

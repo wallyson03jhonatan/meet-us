@@ -58,8 +58,8 @@ const items = computed(() => {
       {label: t("inicio"), to: '#start'}, 
       {label: t("sobre"), to: '#about-us'}, 
       {label: t("projetos"), to: '#projects'}, 
-      {label: t("feedbacks"), to: '#feedbacks'},
       {label: t("habilidades"), to: '#skills'}, 
+      {label: t("feedbacks"), to: '#feedbacks'},
       {label: t("contato"), to: '#contact-us'},
     ]
   ]

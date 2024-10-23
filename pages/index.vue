@@ -4,8 +4,8 @@
       <SectionStart />
       <SectionAbout />
       <SectionProjects />
-      <SectionFeedbacks />
       <SectionSkills />
+      <SectionFeedbacks />
       <SectionContact />
     </main>
 

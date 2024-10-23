@@ -22,13 +22,17 @@
     "inicioCardResiliencia": "We believe in resilience and accessibility. We overcome challenges to ensure our solutions are within everyone's reach, making the digital experience inclusive and sustainable.",
 
     "sobreTitulo": "Meet our team",
-    "sobreDescricao": "Get to know the faces behind the scenes and learn about the values that drive us.",
+    "sobreDescricao": "Get to know the faces behind the scenes and learn about the values that drive us",
 
-    "feedbackTitulo": "Real Stories from Satisfied Customers",
-    "feedbackDescricao": "See how our skills and hard work is making an impact.",
-    "feedbackRating": "Satisfied",
+    "projetosTitulo": "Selected Works",
+    "projetosDescricao": "Explore our portfolio and see the latest projects that we've brought to life",
+    "projetosStackDescricao": "Main technologies used in the project:",
 
     "habilidadesTitulo": "Our Skills",
-    "habilidadesDescricao": "See how we can contribute to your business regardless of the tool used."
+    "habilidadesDescricao": "See how we can contribute to your business regardless of the tool used",
+
+    "feedbackTitulo": "Real Stories from Satisfied Customers",
+    "feedbackDescricao": "See how our skills and hard work is making an impact",
+    "feedbackRating": "Satisfied"
   }
 }
