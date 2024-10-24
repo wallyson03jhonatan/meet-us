@@ -33,6 +33,18 @@
 
     "feedbackTitulo": "Real Stories from Satisfied Customers",
     "feedbackDescricao": "See how our skills and hard work is making an impact",
-    "feedbackRating": "Satisfied"
+    "feedbackRating": "Satisfied",
+
+    "contatoTitulo": "Contact Us",
+    "contatoDescricao": "Let's create a connection that is truly special",
+    "contatoNome": "Name",
+    "contatoEmail": "Email",
+    "contatoAssunto": "Subject",
+    "contatoMensagem": "Message",
+    "contatoBotao": "Send Message",
+    "contatoErrorNome": "A name is required!",
+    "contatoErrorEmail": "A email is required!",
+    "contatoErrorAssunto": "A subject is required!",
+    "contatoErrorMensagem": "A message is required!"
   }
 }

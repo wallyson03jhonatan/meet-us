@@ -8,7 +8,7 @@
                 </div>
 
                 <div>
-                    <h6 class="text-sm font-medium">{{ $t("projetosStackDescricao") }}</h6>
+                    <span class="text-sm font-medium">{{ $t("projetosStackDescricao") }}</span>
                     <div class="mt-2 grid grid-cols-1 md:grid-cols-3 gap-4">
                         <UBadge v-for="item, index in project.stack" :key="index" :label="item" variant="soft" color="blue" size="sm" class="justify-center" />
                     </div>

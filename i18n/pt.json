@@ -33,7 +33,18 @@
 
     "feedbackTitulo": "Histórias reais de clientes satisfeitos",
     "feedbackDescricao": "Veja como nossas habilidades e trabalho duro está fazendo a diferença",
-    "feedbackRating": "Satisfeito"
+    "feedbackRating": "Satisfeito",
 
+    "contatoTitulo": "Entre em contato conosco",
+    "contatoDescricao": "Envie suas dúvidas, sugestões ou reclamações",
+    "contatoNome": "Nome",
+    "contatoEmail": "E-mail",
+    "contatoAssunto": "Assunto",
+    "contatoMensagem": "Mensagem",
+    "contatoBotao": "Enviar",
+    "contatoErrorNome": "É necessário digitar um nome!",
+    "contatoErrorEmail": "É necessário digitar um e-mail válido!",
+    "contatoErrorAssunto": "É necessário digitar um assunto!",
+    "contatoErrorMensagem": "É necessário digitar uma mensagem!"
   }
 }

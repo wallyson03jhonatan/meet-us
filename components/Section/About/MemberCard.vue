@@ -2,7 +2,8 @@
   <div ref="cardMemberRef" :class="{ 'flip-card--visible': isCardMemberVisible }" class="flip-card">
     <UCard :ui="ui">
       <div class="flex flex-col items-center gap-4">
-        <UAvatar size="3xl" :src="member.avatar" :alt="`${member.name} Avatar`" />
+        <NuxtImg :src="member.avatar" :alt="`${member.name} Avatar`" height="80" width="80"
+          class="max-h-20 max-w-20 rounded-full" format="webp" />
         <div class="text-center">
           <h3 class="font-medium">{{ member.name }}</h3>
           <p class="text-sm">{{ member.profession }}</p>
@@ -12,14 +13,8 @@
       <p class="text-justify mt-4">{{ member.bio }}</p>
 
       <div class="flex justify-around w-full mt-4">
-        <ULink 
-          v-for="link in member.links" 
-          :key="link.url" 
-          :to="link.url" 
-          target="_blank" 
-          active-class="text-primary"
-          inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-        >
+        <ULink v-for="link in member.links" :key="link.url" :to="link.url" target="_blank" active-class="text-primary"
+          inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
           {{ link.title }}
         </ULink>
       </div>

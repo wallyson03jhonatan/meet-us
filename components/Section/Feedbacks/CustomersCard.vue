@@ -3,7 +3,8 @@
         <UCard :ui="ui">
 
             <div class="flex flex-col items-center gap-4">
-                <UAvatar size="3xl" :src="feedbackInfo.avatar" alt="avatar" />
+                <NuxtImg :src="feedbackInfo.avatar" :alt="`${feedbackInfo.name} Avatar`" height="80" width="80"
+                class="max-h-20 max-w-20 rounded-full" format="webp" />
                 <div class="text-center">
                     <h3 class="font-medium">{{ feedbackInfo.name }}</h3>
                     <p class="text-sm">{{ feedbackInfo.profession }}</p>
