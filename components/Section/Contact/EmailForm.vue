@@ -21,7 +21,7 @@
             </UFormGroup>
 
             <UFormGroup :label="$t('contatoMensagem')" name="message" size="lg" class="w-full">
-                <UTextarea :ui="uiInput" v-model="message" resize variant="outline" placeholder="Escreva sua mensagem..." /> 
+                <UTextarea :ui="uiInput" v-model="message" resize variant="outline" placeholder="Lorem ipsum..." /> 
                 <span v-if="!message" class="text-sm text-red-500">{{ $t("contatoErrorMensagem") }}</span>
             </UFormGroup>  
         </div>  
