@@ -38,7 +38,7 @@ defineProps<{
 }>()
 
 const ui = {
-    base: 'flex justify-center items-center min-h-[360px] max-h-fit',
+    base: 'flex justify-center items-center min-h-[400px] max-h-fit',
     background: 'bg-white dark:bg-gray-800/50',
     rounded: 'rounded-xl',
     body: {
