@@ -50,7 +50,7 @@ export default defineEventHandler((event) => {
             "id": 3,
             'title': 'To Do React',
             'description': t.description3,
-            'deploy': '',
+            'deploy': 'https://github.com/wallyson03jhonatan/to-do-react/blob/main/public/todo-img.png?raw=true',
             'github': 'https://github.com/wallyson03jhonatan/to-do-react',
             'stack': ['React', 'Typescript', 'CSS']
         },
@@ -58,7 +58,7 @@ export default defineEventHandler((event) => {
             "id": 4,
              'title': 'Dev Links',
             'description': t.description4,
-            'deploy': '',
+            'deploy': 'https://github.com/wallyson03jhonatan/dev-links/raw/main/.github/preview.jpg',
             'github': 'https://github.com/wallyson03jhonatan/dev-links',
             'stack': ['HTML', 'CSS', 'Javascript']
         },
