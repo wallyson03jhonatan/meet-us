@@ -50,7 +50,7 @@ export default defineEventHandler((event) => {
             "id": 3,
             'title': 'To Do React',
             'description': t.description3,
-            'deploy': 'https://github.com/wallyson03jhonatan/to-do-react/blob/main/public/todo-img.png?raw=true',
+            'deploy': 'https://www.youtube.com/watch?v=tbJQCxFjdQw',
             'github': 'https://github.com/wallyson03jhonatan/to-do-react',
             'stack': ['React', 'Typescript', 'CSS']
         },
